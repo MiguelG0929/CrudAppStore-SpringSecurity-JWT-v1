@@ -23,7 +23,7 @@ Una API REST robusta y segura para gestión de tienda con autenticación JWT y c
 3. 🏗️ Arquitectura del Proyecto  
 4. 💻 Tecnologías Utilizadas  
 5. 🔐 Modelo de Seguridad  
-6. 🛠️ API Endpoints  
+6. 📍 API Endpoints  
 7. 📂 Estructura de Archivos  
 8. 🗄️ Base de Datos  
 9. ⚙️ Instalación y Ejecución  
@@ -191,7 +191,58 @@ El sistema implementa un modelo de seguridad RBAC (Role-Based Access Control) co
 🔄 Flujo de Autenticación
 ![Flujo Securityt](docs/flujo_security.png)
 
+🎫 **Estructura del Token JWT**
+~~~
+{
+  "iss": "AUTHOJWT-BACKEND",
+  "sub": "admin",
+  "authorities": "ROLE_ADMIN,READ,CREATE,UPDATE,DELETE",
+  "iat": 1640995200,
+  "exp": 1640997000,
+  "jti": "550e8400-e29b-41d4-a716-446655440000"
+}
+~~~
 
+📍 **API Endpoints**
+<div align="center">
 
+🔑 **Autenticación (`/auth`)**
 
+| Método | Endpoint    | Descripción          | Request Body          | Response          | Código |
+|--------|------------|--------------------|---------------------|-----------------|--------|
+| POST   | /sign-up   | Registrar nuevo usuario | `AuthCreateUserDTO` | `AuthResponseDTO` | 201    |
+| POST   | /log-in    | Iniciar sesión        | `AuthLoginRequestDTO` | `AuthResponseDTO` | 200    |
+
+<details>
+  <summary><b>📝 Ejemplo de Request/Response</b></summary>
+
+~~~
+json
+// Request ejemplo para /sign-up
+{
+  "username": "juan123",
+  "email": "juan@example.com",
+  "password": "********"
+}
+
+// Response ejemplo para /sign-up
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "username": "juan123",
+  "roles": ["USER"]
+}
+
+// Request ejemplo para /log-in
+{
+  "username": "juan123",
+  "password": "********"
+}
+
+// Response ejemplo para /log-in
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "username": "juan123",
+  "roles": ["USER"]
+}
+~~~
 

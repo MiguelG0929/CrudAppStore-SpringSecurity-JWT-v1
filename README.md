@@ -24,6 +24,7 @@ Arquitectura modular, limpia y fácil de mantener.
 
 Ideal para aprender buenas prácticas de Spring Boot, DDD ligero, manejo de JWT y diseño de APIs robustas.
 
+~~~
 crudstore-backend/
 ├── src/main/java/com/mglopez/crudstore/
 │   ├── config/                  # Configuraciones generales (CORS, DataInitializer)
@@ -40,7 +41,7 @@ crudstore-backend/
 └── src/main/resources/
     ├── application.properties
     └── templates, static
-
+~~~
 
 | Tecnología            | Versión/Detalle           |
 | --------------------- | ------------------------- |

@@ -46,17 +46,21 @@ El sistema implementa un **modelo de seguridad avanzado** basado en **JWT (JSON 
 
 ![Arquitectura del Proyecto](docs/DiagramaArquitectura.png)
 
-✨ Características Principales
 <div align="center">
-Funcionalidad	Estado	Descripción
-✅ CRUD Productos	Completo	Gestión completa de productos con soft delete
-✅ CRUD Categorías	Completo	Organización de productos por categorías
-✅ Autenticación JWT	Completo	Sistema seguro basado en tokens
-✅ Roles y Permisos	Completo	Control de acceso granular (RBAC)
-✅ Validaciones	Completo	Validación en todas las capas
-✅ Documentación	Completo	Código autodocumentado y README
-✅ Soft Delete	Completo	Eliminación lógica para preservar datos
-✅ CORS Configurado	Completo	Comunicación con frontend Angular
+
+✨ **Características Principales**
+
+| Funcionalidad        | Estado    | Descripción                                     |
+|---------------------|-----------|-------------------------------------------------|
+| ✅ CRUD Productos    | Completo  | Gestión completa de productos con soft delete |
+| ✅ CRUD Categorías   | Completo  | Organización de productos por categorías      |
+| ✅ Autenticación JWT | Completo  | Sistema seguro basado en tokens               |
+| ✅ Roles y Permisos  | Completo  | Control de acceso granular (RBAC)            |
+| ✅ Validaciones      | Completo  | Validación en todas las capas                 |
+| ✅ Documentación     | Completo  | Código autodocumentado y README               |
+| ✅ Soft Delete       | Completo  | Eliminación lógica para preservar datos       |
+| ✅ CORS Configurado  | Completo  | Comunicación con frontend Angular             |
+
 </div>
 
 

@@ -91,7 +91,42 @@ El proyecto sigue una arquitectura hexagonal (puertos y adaptadores) organizada 
 └─────────────────────────────────────────────────────────────┘
 ~~~
 
+📁 **Estructura por Módulos**
+~~~
+📦 crudstore-backend/
+├── 📁 src/main/java/com/mglopez/crudstore/
+│   ├── 📁 config/                    # Configuraciones globales
+│   │   ├── 📄 CorsConfig.java        # Configuración CORS
+│   │   └── 📄 DataInitializer.java   # Datos iniciales automáticos
+│   ├── 📁 modules/                    # Módulos funcionales
+│   │   ├── 📁 auth/                    # 🔐 Módulo de autenticación
+│   │   ├── 📁 categoria/                # 📂 Módulo de categorías
+│   │   └── 📁 producto/                 # 📦 Módulo de productos
+│   └── 📁 shared/                      # Código compartido
+│       └── 📁 exception/                # Manejo global de errores
+└── 📁 src/main/resources/
+    ├── 📄 application.properties       # Configuración de la app
+    └── 📁 exception/                    # Clases de excepción
+~~~
 
+💻 **Tecnologías Utilizadas**
+<div align="center">
+
+🛠 **Tecnologías Utilizadas**
+
+| Tecnología          | Versión  | Icono | Propósito                    |
+|--------------------|----------|-------|-------------------------------|
+| Java               | 17       | ![Java](https://img.shields.io/badge/Java-17-blue) | Lenguaje principal          |
+| Spring Boot        | 4.0.2    | ![Spring Boot](https://img.shields.io/badge/Spring-4.0.2-brightgreen) | Framework base              |
+| Spring Security    | 6.x      | ![Spring Security](https://img.shields.io/badge/Security-6.x-green) | Autenticación               |
+| Spring Data JPA    | 3.x      | ![Spring Data JPA](https://img.shields.io/badge/JPA-3.x-yellow) | Persistencia                |
+| JWT (Auth0)        | 4.5.0    | ![JWT](https://img.shields.io/badge/JWT-4.5.0-orange) | Tokens                      |
+| PostgreSQL         | 15.x     | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15.x-blue) | Base de datos               |
+| Lombok             | 1.18.30  | ![Lombok](https://img.shields.io/badge/Lombok-1.18.30-red) | Código limpio               |
+| Maven              | 3.8.x    | ![Maven](https://img.shields.io/badge/Maven-3.8.x-purple) | Build tool                  |
+| Bean Validation    | 3.x      | ![Validation](https://img.shields.io/badge/Validation-3.x-lightgrey) | Validaciones               |
+
+</div>
 
 
 

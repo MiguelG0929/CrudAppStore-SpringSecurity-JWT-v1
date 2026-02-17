@@ -44,5 +44,7 @@ El sistema implementa un **modelo de seguridad avanzado** basado en **JWT (JSON 
 
 </div>
 
+![Arquitectura del Proyecto](docs/DiagramaArquitectura.png)
+
 
 

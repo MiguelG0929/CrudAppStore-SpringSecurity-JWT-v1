@@ -15,7 +15,6 @@ Una API REST robusta y segura para gestión de tienda con autenticación JWT y c
 
 </div>
 
-<div align="center">
 
 📋 **Tabla de Contenido**
 
@@ -31,8 +30,6 @@ Una API REST robusta y segura para gestión de tienda con autenticación JWT y c
 10. ⚠️ Manejo de Excepciones  
 11. 🌟 Buenas Prácticas  
 12. 👥 Autores
-
-</div>
 
 
 <div align="center">

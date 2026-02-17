@@ -61,8 +61,10 @@ El sistema implementa un **modelo de seguridad avanzado** basado en **JWT (JSON 
 
 </div>
 
+<div align="center">
 🏗️ **Arquitectura del Proyecto**
 El proyecto sigue una arquitectura hexagonal (puertos y adaptadores) organizada en módulos funcionales:
+</div>
 
 ~~~
 ┌─────────────────────────────────────────────────────────────┐

@@ -174,6 +174,21 @@ El sistema implementa un modelo de seguridad RBAC (Role-Based Access Control) co
 
 ![Modelo de Seguridad](docs/diagramaSecurityRoles.png)
 
+📊 **Matriz de Acceso**
+<div align="center">
+
+📊 **Matriz de Acceso**
+
+| Rol       | READ | CREATE | UPDATE | DELETE |
+|-----------|------|--------|--------|--------|
+| ADMIN     | ✅   | ✅     | ✅     | ✅     |
+| USER      | ✅   | ✅     | ❌     | ❌     |
+| DEVELOPER | ✅   | ✅     | ✅     | ❌     |
+| INVITED   | ✅   | ❌     | ❌     | ❌     |
+
+</div>
+
+🔄 Flujo de Autenticación
 
 
 

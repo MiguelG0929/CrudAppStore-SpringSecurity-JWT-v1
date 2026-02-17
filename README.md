@@ -407,6 +407,7 @@ curl http://localhost:9525/actuator/health
 
 </div>
 📝 Formato de Respuesta de Error
+
 ~~~
 {
   "timestamp": "2024-01-15T10:30:45.123",

@@ -34,6 +34,7 @@ Una API REST robusta y segura para gestión de tienda con autenticación JWT y c
 
 </div>
 
+#descripción-general
 🎯 Descripción General
 CRUD Store es una aplicación backend desarrollada con Spring Boot que proporciona una API REST completa para la gestión de un catálogo de productos organizados por categorías. El sistema implementa un modelo de seguridad avanzado basado en JWT (JSON Web Tokens) con un sistema granular de roles y permisos.
 

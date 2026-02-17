@@ -19,20 +19,21 @@ Una API REST robusta y segura para gestión de tienda con autenticación JWT y c
 
 📋 **Tabla de Contenido**
 
-1. [Descripción General](#descripción-general)  
-2. [Características Principales](#características-principales)  
-3. [Arquitectura del Proyecto](#arquitectura-del-proyecto)  
-4. [Tecnologías Utilizadas](#tecnologías-utilizadas)  
-5. [Modelo de Seguridad](#modelo-de-seguridad)  
-6. [API Endpoints](#api-endpoints)  
-7. [Estructura de Archivos](#estructura-de-archivos)  
-8. [Base de Datos](#base-de-datos)  
-9. [Instalación y Ejecución](#instalación-y-ejecución)  
-10. [Manejo de Excepciones](#manejo-de-excepciones)  
-11. [Buenas Prácticas](#buenas-prácticas)  
-12. [Autores](#autores)
+1. 🎯 Descripción General  
+2. ✨ Características Principales  
+3. 🏗️ Arquitectura del Proyecto  
+4. 💻 Tecnologías Utilizadas  
+5. 🔐 Modelo de Seguridad  
+6. 🛠️ API Endpoints  
+7. 📂 Estructura de Archivos  
+8. 🗄️ Base de Datos  
+9. ⚙️ Instalación y Ejecución  
+10. ⚠️ Manejo de Excepciones  
+11. 🌟 Buenas Prácticas  
+12. 👥 Autores
 
 </div>
+
 
 <div align="center">
 

@@ -246,3 +246,45 @@ json
 }
 ~~~
 
+📂 **Categorías** (/api/categorias)
+
+| Método | Endpoint       | Descripción                  | Permiso Requerido | Código |
+|--------|----------------|------------------------------|-----------------|--------|
+| GET    | /              | Listar categorías activas    | READ            | 200    |
+| GET    | /{id}          | Obtener categoría por ID     | READ            | 200    |
+| POST   | /create        | Crear categoría              | CREATE          | 201    |
+| PUT    | /{id}          | Actualizar categoría         | UPDATE          | 200    |
+| DELETE | /{id}          | Eliminar (desactivar) categoría | DELETE       | 204    |
+
+<details> <summary><b>📝 Ejemplos</b></summary>
+    
+**Crear Categoría:**
+~~~
+POST /api/categorias/create
+{
+  "nombre": "Electrónica",
+  "descripcion": "Dispositivos electrónicos y gadgets"
+}
+~~~
+**Response:**
+~~~
+{
+  "id": 1,
+  "nombre": "Electrónica",
+  "descripcion": "Dispositivos electrónicos y gadgets",
+  "activa": true,
+  "fechaCreacion": "2024-01-15T10:30:00"
+}
+~~~
+
+📦 **Productos** (/api/productos)
+
+| Método | Endpoint                    | Descripción                  | Permiso Requerido | Código |
+|--------|-----------------------------|------------------------------|-----------------|--------|
+| GET    | /                           | Listar productos activos     | Autenticación   | 200    |
+| GET    | /{id}                       | Obtener producto por ID      | Autenticación   | 200    |
+| GET    | /categoria/{categoriaId}    | Productos por categoría      | Autenticación   | 200    |
+| POST   | /                           | Crear producto               | Autenticación   | 201    |
+| PUT    | /{id}                       | Actualizar producto          | Autenticación   | 200    |
+| DELETE | /{id}                       | Eliminar (desactivar) producto | Autenticación | 204    |
+

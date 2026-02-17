@@ -189,7 +189,7 @@ El sistema implementa un modelo de seguridad RBAC (Role-Based Access Control) co
 </div>
 
 🔄 Flujo de Autenticación
-
+![Flujo Securityt](docs/flujo_security.png)
 
 
 

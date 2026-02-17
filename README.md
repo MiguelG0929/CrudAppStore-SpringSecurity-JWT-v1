@@ -8,6 +8,8 @@
 
 Una API REST robusta y segura para gestión de tienda con autenticación JWT y control de acceso por roles
 
+!Nota se recomienda usar solo el backend con Postman el frontend estara disponible proximamente.
+
 🚀 **Características •**  
 📚 **Documentación API •**  
 🔐 **Seguridad •**  

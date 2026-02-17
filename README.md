@@ -169,8 +169,10 @@ El proyecto sigue una arquitectura hexagonal (puertos y adaptadores) organizada 
 </dependencies>
 ~~~
 
+🔐 **Modelo de Seguridad**
+El sistema implementa un modelo de seguridad RBAC (Role-Based Access Control) con permisos granulares:
 
-
+![Modelo de Seguridad](docs/diagramaSecurityRoles.png)
 
 
 

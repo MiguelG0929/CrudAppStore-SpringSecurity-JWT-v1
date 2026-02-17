@@ -16,7 +16,7 @@ Una API REST robusta y segura para gestión de tienda con autenticación JWT y c
 </div>
 
 
-📋 **Tabla de Contenido**
+# 📋 Tabla de Contenido
 
 1. 🎯 Descripción General  
 2. ✨ Características Principales  
@@ -448,7 +448,7 @@ curl http://localhost:9525/actuator/health
 
 ⭐ **Si te gusta este proyecto, ¡no olvides darle una estrella!** ⭐  
 
-[⬆️ Volver al inicio](#tabla-de-contenido)
+[⬆️ Volver al inicio](#-tabla-de-contenido)
 
 </div>
 

@@ -245,6 +245,7 @@ json
   "roles": ["USER"]
 }
 ~~~
+</details>
 
 📂 **Categorías** (/api/categorias)
 
@@ -276,6 +277,7 @@ POST /api/categorias/create
   "fechaCreacion": "2024-01-15T10:30:00"
 }
 ~~~
+</details>
 
 📦 **Productos** (/api/productos)
 
@@ -287,4 +289,145 @@ POST /api/categorias/create
 | POST   | /                           | Crear producto               | Autenticación   | 201    |
 | PUT    | /{id}                       | Actualizar producto          | Autenticación   | 200    |
 | DELETE | /{id}                       | Eliminar (desactivar) producto | Autenticación | 204    |
+
+<details> <summary><b>📝 Ejemplos</b></summary>
+
+
+**Crear Producto:**
+POST /api/productos
+~~~
+{
+  "name": "Laptop Gamer",
+  "descripcion": "Laptop con RTX 4060, 16GB RAM",
+  "precio": 1299.99,
+  "categoriaId": 1
+}
+~~~
+**Response:**
+~~~
+{
+  "id": 1,
+  "name": "Laptop Gamer",
+  "descripcion": "Laptop con RTX 4060, 16GB RAM",
+  "precio": 1299.99,
+  "activo": true,
+  "categoriaId": 1,
+  "categoriaNombre": "Electrónica",
+  "fechaCreacion": "2024-01-15T10:35:00"
+}
+~~~
+</details>
+
+📊 **Base de Datos**
+![Flujo Securityt](docs/DiagramaEntidadRelacion.png)
+
+⚙️ **Instalación y Ejecución**
+📋 Prerrequisitos
+☕ JDK 17 o superior
+
+🐘 Maven 3.8+
+
+🐘 PostgreSQL 15+
+
+🔧 IDE (IntelliJ IDEA, Eclipse, VS Code)
+
+📬 Postman o similar (para pruebas)
+
+🚀 **Pasos de Instalación**
+
+1️⃣ Clonar el repositorio
+~~~
+git clone https://github.com/tu-usuario/crudstore-backend.git
+cd crudstore-backend
+~~~
+2️⃣ Configurar la base de datos
+~~~
+-- Conectar a PostgreSQL
+sudo -u postgres psql
+
+-- Crear base de datos
+CREATE DATABASE crudstore_db;
+
+-- Salir
+\q
+~~~
+3️⃣ Configurar application.properties
+~~~
+# DATA BASE CONFIGURATION
+spring.datasource.url=jdbc:postgresql://localhost:5432/crudstore_db
+spring.datasource.username=postgres
+spring.datasource.password=tu_contraseña
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA/HIBERNATE CONFIGURATION
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.format_sql=true
+
+# SERVER CONFIGURATION
+server.port=9525
+
+# JWT SECURITY
+security.jwt.key.private=13e84f751d69db68ab9a6a4e46b6f1c7ea3373482549e791b991d09de2d911a8
+security.jwt.user.generator=AUTHOJWT-BACKEND
+~~~
+4️⃣ Compilar y ejecutar
+~~~
+# Limpiar y compilar
+mvn clean install
+
+# Ejecutar la aplicación
+mvn spring-boot:run
+~~~
+5️⃣ Verificar la instalación
+~~~
+# La aplicación debería estar corriendo en:
+curl http://localhost:9525/actuator/health
+
+# Respuesta esperada:
+{"status":"UP"}
+~~~
+🐳 Ejecución con Docker (Aun no implementado, proximamente...)
+
+🚨 **Manejo de Excepciones**
+![Excepciones](docs/JerarquiaExcepciones.png)
+
+<div align="center">
+
+🎯 **Tipos de Excepción**
+
+| Excepción                         | Código HTTP | Cuándo ocurre                           | Ejemplo                                  |
+|----------------------------------|------------|----------------------------------------|-----------------------------------------|
+| ResourceNotFoundException         | 404        | Recurso no encontrado                  | Producto no encontrado con ID: 999      |
+| BadRequestException               | 400        | Datos inválidos o duplicados           | La categoría ya existe: Electrónica     |
+| BadCredentialsException           | 401        | Credenciales incorrectas               | Invalid username or password            |
+| UsernameNotFoundException         | 401        | Usuario no existe                      | El usuario admin no existe              |
+| MethodArgumentNotValidException   | 400        | Validación de DTO falla                | name no puede estar vacío               |
+
+</div>
+📝 Formato de Respuesta de Error
+~~~
+{
+  "timestamp": "2024-01-15T10:30:45.123",
+  "status": 404,
+  "error": "RESOURCE_NOT_FOUND",
+  "message": "Producto no encontrado con ID: 999"
+}
+~~~
+
+<div align="center">
+
+✨ **Buenas Prácticas**
+
+🎨 **Código Limpio**
+
+| Práctica       | Implementación      | Beneficio                     |
+|----------------|-------------------|-------------------------------|
+| DTOs           | Records de Java    | Inmutabilidad y código conciso |
+| Lombok         | `@Data`, `@Builder` | Reduce boilerplate           |
+| Documentación  | Comentarios Javadoc | Código autodocumentado       |
+| Validaciones   | Bean Validation    | Datos consistentes            |
+
+</div>
 
